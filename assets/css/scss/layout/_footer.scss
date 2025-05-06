@@ -1,0 +1,179 @@
+
+#signups {
+	position: relative;
+	background-color: #000;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.cover-overlay {
+		background: rgba(0,0,0,0.8);
+	}
+
+	.form {
+		position: relative;
+		padding: 100px 100px;
+		text-align: center;
+		z-index: 50;
+
+		@media (max-width: 600px) {
+			padding: 50px 20px;
+		}
+
+		h3 {
+			font-family: 'TaurunumFerrum-Steel';
+			color: $color-white;
+			font-size: 50px;
+			text-transform: uppercase;
+		}
+
+		p {
+			color: #fff;
+			font-size: 14px;
+			letter-spacing: 2px;
+		}
+
+		.gform_wrapper {
+			text-align: center;
+			margin: 0 auto;
+			width: 80%;
+
+			@media (max-width: 600px) {
+				width: 100%;
+			}
+
+			form {
+				text-align: center;
+
+				.gfield {
+					margin-top: 5px;
+					padding-right: 0;
+				}
+
+				label {
+					color: #fff !important;
+					margin-top: 20px;
+					font-size: 20px;
+					padding-left: 0;
+				}
+
+				.checkbox {
+					text-align: left;
+				}
+
+				.gfield_checkbox {
+
+					label {
+						color: #fff !important;
+						margin-top: 0;
+						font-size: 18px;
+						font-weight: 400;
+						padding-left: 20px;
+					}
+				}
+
+				.gfield_required {
+					color: #fff;
+				}
+			}
+
+			.gform_footer {
+				padding: 0;
+				margin-top: 7px;
+
+				input {
+					padding: 10px 50px;
+					font-size: 20px;
+				}
+			}
+
+			.validation_message {
+				color: $color-yellow;
+			}
+
+			.gfield_error {
+				color: $color-yellow;
+				border-color: $color-yellow;
+				max-width: 100% !important;
+				background-color: rgba(255,255,255,0.25);
+
+				input {
+					border: 0 !important;
+					color: $color-black;
+				}
+			}
+
+
+
+			.validation_error {
+				color: $color-yellow;
+				border-color: $color-yellow;
+			}
+
+			
+		}
+
+		.gform_confirmation_message {
+			color: #fff;
+			font-size: 14px;
+			letter-spacing: 2px;
+		}
+
+		input {
+			padding: 5px;
+			width: 100%;
+
+			@media (max-width: 600px) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+#footer {
+    position: relative;
+    padding: 75px 0 10px 0;
+    background-color: $color-yellow;
+
+    a {
+        color: $color-black;
+        text-decoration: underline;
+    }
+
+    .info {
+
+		@media (max-width: 600px) {
+			text-align: center;
+		}
+
+        h4 {
+            text-transform: uppercase;
+            margin: 10px 0;
+            font-weight: 800;
+        }
+
+        .fa {
+            font-size: 60px;
+        }
+    }
+
+    img {
+        
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    .logo {
+        text-align: center;
+
+        @media (max-width: 600px) {
+            margin-top: 30px;
+        }
+    }
+
+    .copyright {
+        font-size: 13px;
+        text-align: center;
+        padding-top: 80px;
+    }
+}

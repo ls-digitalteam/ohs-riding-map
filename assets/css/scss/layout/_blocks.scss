@@ -1,0 +1,222 @@
+// CONTENT BLOCKS 
+
+.content-block {
+
+	margin: 40px 0;
+
+	@media (max-width: 600px) {
+		margin: 20px 0;
+	}
+
+	&.two-col {
+		.column {
+			padding: 0 50px;
+
+			@media only screen and (max-width: 768px) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&.two-col-cta {
+
+		.column {
+			background-size: cover;
+			text-align: center;
+			
+
+			@media only screen and (min-width: 992px) {
+				width: 40%;
+				margin: 0 5%;
+			}
+
+			@media only screen and (max-width: 991px) {
+				margin-bottom: 20px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			&:hover {
+				.cover-overlay {
+	
+					background-color: rgba(251,210,19, 0.5);
+	
+				}
+			}
+
+			.content {
+				padding: 20px 30px;
+				min-height: 350px;
+				
+
+				.text {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%,-50%);
+					z-index: 95;
+					font-family: 'TaurunumFerrum-Steel';
+					font-size: 50px;
+					line-height: 50px;
+					text-transform: uppercase;
+					color: #fff;
+			
+				}
+
+			}
+
+		
+		}
+
+	}
+
+	&.full-col {
+		.column {
+			padding: 0;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&.promo-col {
+		.column {
+			padding: 0;
+		}
+		.info {
+			color: #fff;
+			position: absolute;
+			z-index: 50;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			width: 60%;
+			text-align: center;
+
+			@media only screen and (max-width: 768px) {
+				width:75%;
+			}
+
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&.rotator-col {
+		.column {
+			padding: 0;
+		}
+
+		.item {
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			.carousel-caption {
+				color: #fff;
+				position: absolute;
+				z-index: 50;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				width: 60%;
+				text-align: center;
+
+				@media only screen and (max-width: 768px) {
+					top: 45%;
+				}
+			}
+
+			
+		}
+
+		.carousel-control {
+			background-image: none !important;
+			top: 50%;
+			margin-top: -50px;
+
+			.fa {
+				font-size: 50px;
+				color: #fff;
+			}
+		}
+	}
+
+	&.faq {
+		.panel-group {
+            margin-bottom: 40px;
+
+            .panel {
+                border: 0;
+
+                .panel-heading {
+                    
+                    border-radius: 0;
+					padding: 15px 10px;
+					background-color: #222;
+					border-bottom: 2px solid $color-yellow;
+					margin-bottom: 5px;
+					font-size: 18px;
+					color: #fff;
+
+                    &.active {
+                        .fa {
+                            -ms-transform: rotate(0deg); /* IE 9 */
+                            -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+                            transform: rotate(0deg);
+                        }
+                    }
+
+                    .fa {
+                        position: absolute;
+                        margin-top: 6px;
+                        color: $color-yellow;
+                        font-size: 14px;
+                        -ms-transform: rotate(45deg); /* IE 9 */
+                        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+                        transform: rotate(45deg);
+                        -moz-transition: 0.1s ease-in-out;
+                        -o-transition: 0.1s ease-in-out;
+                        -webkit-transition: 0.1s ease-in-out;
+                        -ms-transition: 0.1s ease-in-out;
+                        transition: 0.1s ease-in-out;
+                    }
+
+                    strong {
+                        
+                    }
+                    
+                    a {
+                        text-decoration: none !important;
+                        color: #fff;
+                        padding-left: 20px;
+                    }
+                    
+                }
+                .panel-body {
+					padding: 20px 30px;
+
+                    p {
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                        padding: 0 15px;
+                    }
+                }
+            }
+
+        }
+
+	}
+}

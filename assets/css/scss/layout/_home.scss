@@ -1,0 +1,540 @@
+.home {
+
+	#intro-sticky-wrapper {
+		height: 520px !important;
+
+		@media (max-width: 768px) {
+			height: 460px !important;
+		}
+		@media (max-width: 768px) {
+			height: 400px !important;
+		}
+	}
+
+	#intro {
+		position: relative;
+		max-height: 850px;
+		padding-top: 100px;
+
+		@media (max-width: 768px) {
+			position: relative !important;
+		}
+
+		@media (max-width: 600px) {
+			padding-top: 5px;
+		}
+
+		.cover-overlay {
+			//margin-top: 120px;
+			max-height: 850px;
+		}
+
+		.title {
+			width: 100%;
+			position: absolute;
+			z-index: 5;
+			left: 50%;
+			top: 70%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			font-size: 120px;
+			line-height: 100px;
+			color: $color-white;
+			font-family: 'TaurunumFerrum-Steel';
+			text-transform: uppercase;
+			//margin: 60px auto;
+
+			@media (max-width: 1500px) {
+				//top: 40%;
+			}
+
+
+
+			@media (max-width: 1100px) {
+				top: 350px;
+			}
+
+			@media (max-width: 768px) {
+				top: 300px;
+				font-size: 75px;
+				line-height: 60px;
+			
+			}
+
+			@media (max-width: 767px) {
+			
+				width: 100%;
+				font-size: 60px;
+				line-height: 50px;
+				padding: 0 20px;
+				transform: none;
+				text-align: center;
+				top: 230px;
+				left: auto;
+			}
+
+			h1 {
+				font-size: 120px;
+				line-height: 100px;
+
+				@media (max-width: 768px) {
+					font-size: 95px;
+					line-height: 80px;
+				}
+
+				@media (max-width: 600px) {
+					font-size: 65px;
+					line-height: 60px;
+				}
+			}
+
+		}
+
+		img {
+			
+			@media (max-width: 768px) {
+
+			}
+
+			&.mobile-image {
+				display: none;
+
+				@media (max-width: 600px) {
+					display: block;
+				}
+			}
+		}
+
+		video {
+			width: 100%;
+
+			@media (max-width: 600px) {
+				display: none;
+			}
+		}
+
+		.arrow-down {
+			position: relative;
+			z-index: 50;
+			opacity: 0.5;
+			//bottom: 40%;
+			//left: 50%;
+			margin-top: 200px;
+			//margin-left: 50%;
+			//margin-bottom: 50px;
+
+			@media (max-width: 1500px) {
+				margin-top: 50px;
+			}
+
+			@media (max-width: 1100px) {
+				display: none;
+			}
+
+			.fa {
+				color: #fff;
+				font-size: 40px;
+			}
+		}
+	}
+
+	.is-sticky {
+		
+		.card-section {
+			@media (max-width: 768px) {
+				position: relative !important;
+			}
+		}
+
+		.info {
+			.title {
+				@media (min-width: 768px) {
+					display: none;
+				}
+			}
+
+			.card-info {
+				//right: 0 !important;
+				transition: all .5s ease !important; /* our nice transition */
+			}
+		}
+
+	}
+
+	.card-section {
+		position: relative;
+		max-height: 700px;
+		overflow: hidden;
+		line-height:0;
+
+		video {
+			width: 100%;
+
+			@media (max-width: 600px) {
+				display: none;
+			}
+
+		}
+
+		&.fixed-card {
+			top:0px;
+			width:100%;
+			//z-index:1;
+			
+		}
+
+		&#welcome {
+			margin-top: -10px;
+			//top: 675px;
+			z-index: 10;
+
+			h2 {
+				color: #fff;
+				margin: 0 auto 20px;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: "interstate";
+				font-size: 80px;
+				line-height: 70px;
+				font-weight: 700;
+
+				@media (max-width: 768px) {
+					font-size: 60px;
+					line-height: 50px;
+				}
+	
+				@media (max-width: 600px) {
+					font-size: 34px;
+					line-height: 30px;
+				}
+			}
+		}
+
+		&.plain {
+			background-color: $color-black;
+			padding: 200px 100px;
+			overflow: visible;
+
+			@media (max-width: 768px) {
+				padding: 80px 0;
+			}
+
+			@media (max-width: 600px) {
+				padding: 40px 0;
+			}
+
+			.tear-top {
+				position: absolute;
+				z-index: 99;
+				top: -40px;
+				left: 0;
+				background-image: url('/assets/img/tear-black.png');
+				background-repeat: repeat-x;
+				width: 100%;
+				height: 75px;
+			}
+
+			.tear-bottom {
+				position: absolute;
+				z-index: 99;
+				bottom: -25px;
+				left: 0;
+				background-image: url('/assets/img/tear-black.png');
+				background-repeat: repeat-x;
+				width: 100%;
+				height: 75px;
+			}
+
+			h1 {
+				position: relative;
+				top: 0;
+				width: 100%;
+				margin: 20px 0;
+				color: $color-white;
+				text-transform: uppercase;
+				font-family: "interstate";
+				font-size: 80px;
+				line-height: 70px;
+				text-align: center;
+				font-weight: 800;
+
+				@media (max-width: 768px) {
+					font-size: 50px;
+					line-height: 40px;
+				}
+
+				@media (max-width: 600px) {
+					font-size: 40px;
+					line-height: 35px;
+				}
+			}
+
+			p {
+				color: $color-white;
+				width: 50%;
+				margin: 0 auto;
+				text-align: center;
+				letter-spacing: 1px;
+				line-height: 27px;
+
+				@media (max-width: 768px) {
+					width: 90%;
+				}
+
+				@media (max-width: 600px) {
+					font-size: 15px;
+					line-height: 25px;
+				}
+			}
+
+			
+		}
+
+		.card-info {
+			position: absolute;
+			top: 0;
+			right: -100%;
+			z-index: 999;
+			width: 100%;
+			height: 100%;
+			max-height: 700px;
+			overflow: hidden;
+			transition: all .2s ease; /* our nice transition */
+
+			@media (max-width: 767px) {
+				position: relative;
+				right: 0;
+				z-index: 10;
+			}
+
+			.fa {
+				font-size: 30px;
+				color: #fff;
+			}
+
+			.close-info {
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				z-index: 9999;
+				color: $color-black;
+			}
+	
+			.cover {
+				position: relative;
+				background-color: rgba(251,210,19, 0.6);
+				height: 100%;
+				//margin-bottom: -1000px;
+				//padding-bottom: 1000px;
+
+				@media (max-width: 767px) {
+					display: none;
+				}
+	
+	
+				.title {
+					display: block;
+					position: relative;
+					font-size: 95px;
+					line-height: 80px;
+					width: auto;
+					//padding:  50px;
+
+					@media (max-width: 768px) {
+						font-size: 60px;
+						line-height: 50px;
+						//top: 10px;
+					}
+
+					.icon {
+						@media (max-width: 768px) {
+							//height: 30px;
+						}
+
+						img {
+							@media (max-width: 768px) {
+								//width: 100%;
+							}
+						}
+					}
+				}
+			}
+	
+			.content {
+				position: relative;
+				background-color: #fff;
+				text-align: center;
+				//padding: 0 60px;
+				height: 100%;
+				//margin-bottom: -1000px;
+				//padding-bottom: 1000px;
+
+				@media (max-width: 768px) {
+					padding: 50px;
+				}
+
+				@media (max-width: 767px) {
+					//min-height: 300px;
+					padding: 50px 0;
+					height: 100%;
+				}
+				
+				.text {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%,-50%);
+					width: 75%;
+
+					@media (max-width: 767px) {
+						position: relative;
+						left: 0;
+						top: 0;
+						width: 90%;
+						transform: none;
+						margin: 0 auto;
+						text-align: center;
+					}
+				
+					h3 {
+						font-size: 30px;
+						font-weight: 700;
+						text-transform: uppercase;
+						margin-bottom: 20px;
+					}
+
+					p {
+						line-height: 28px;
+
+						@media (max-width: 768px) {
+							font-size: 14px;
+							line-height: 20px;
+						}
+					}
+
+				}
+			}
+		}
+
+		&.show-info {
+			
+			.title {
+				display: none;
+			}
+
+			.card-info {
+
+				right: 0;
+				transition: all .5s ease; /* our nice transition */
+			}
+			
+
+		}
+
+		.hero-image {
+			margin-top: 0;
+
+			&.mobile-image {
+				display: none;
+
+				@media (max-width: 600px) {
+					display: block;
+				}
+			}
+		}
+
+		.title {
+			
+			position: absolute;
+			z-index: 5;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			font-size: 120px;
+			line-height: 100px;
+			color: $color-white;
+			font-family: 'TaurunumFerrum-Steel';
+			text-transform: uppercase;
+			//margin: 60px auto;
+
+			
+			@media (max-width: 768px) {
+		
+				font-size: 75px;
+				line-height: 60px;
+				//top: 0px;
+			
+			}
+
+			@media (max-width: 767px) {
+			
+				width: 100%;
+				font-size: 60px;
+				line-height: 50px;
+				padding: 0 20px;
+				transform: none;
+				text-align: center;
+				top: 35px;
+				left: auto;
+			}
+
+			p {
+				font-family: "interstate";
+				font-size: 18px;
+				text-align: center;
+			    letter-spacing: 1px;
+			    line-height: 27px;
+			    text-transform: none;
+			    margin-bottom: 5px;
+			}
+	
+			.icon {
+				margin-bottom: 30px;
+				height: 100px;
+
+				@media (max-width: 600px) {
+					height: 50px;
+					margin-bottom: 20px;
+				}
+
+				img {
+
+					@media (max-width: 600px) {
+						width: 50px;
+						height: auto;
+					}
+				}
+			}
+
+			p {
+
+			}
+
+			.btn {
+				//display: block !important;
+				@media (max-width: 600px) {
+					margin-top: 20px;
+				}
+			}
+	
+		}
+
+
+	}
+
+    .cover-overlay {
+        max-height: 1400px;
+		overflow: hidden;
+		z-index: 1;
+	}
+
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	
+	.card-section {
+		position: relative !important;
+	}
+
+}

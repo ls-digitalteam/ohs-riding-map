@@ -1,0 +1,90 @@
+
+#hero {
+
+    max-height: 750px;
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: 768px) {
+       
+    }
+
+    .cover-overlay {
+        max-height: 750px;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            max-height: 500px;
+            margin-top: 100px;
+        }
+    }
+
+    .title {
+
+        position: absolute;
+        z-index: 20;
+        top: 200px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        width: 800px;
+        margin: auto;
+
+        @media (max-width: 1000px) {
+            top: 32%;
+        }
+
+        @media (max-width: 768px) {
+            top: 40%;
+            width: 75%;
+        }
+
+        .icon {
+
+        }
+
+        h1 {
+            color: $color-white;
+            font-size: 130px;
+            line-height: 110px;
+            text-transform: uppercase;
+            margin-top: 60px;
+
+            @media (max-width: 1000px) {
+                font-size: 75px;
+                line-height: 60px;
+            }
+            @media (max-width: 600px) {
+                font-size: 50px;
+                line-height: 40px;
+            }
+        }
+
+        h3 {
+            color: #fff;
+        }
+
+        .hero-text {
+            width: 100%;
+            color: #fff;
+
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+    }
+    
+
+    
+
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+
+    @media (max-width: 768px) {
+        margin-top: 100px;
+    }
+}

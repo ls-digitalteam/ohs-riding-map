@@ -1,0 +1,47 @@
+/*Buttons*/
+
+.btn,
+.gform_wrapper .gform_footer .button {
+	background-color: $color-yellow;
+	color: $color-black !important;
+	padding: 10px 50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "interstate";
+	font-size: 20px;
+	font-weight: 800;
+	text-decoration: none !important;
+	outline: none;
+	border: 0;
+	border-radius: 0;
+	white-space: normal;
+
+	&:hover {
+		background-color: $color-black;
+		color: $color-yellow !important;
+	}
+
+	@media (max-width: 600px) {
+		//padding: 10px;
+	}
+}
+
+
+
+/*SHARE ICONS*/
+
+.at-svc-facebook {
+	background-color: #4a2f26 !important;
+}
+.at-svc-twitter {
+	background-color: #694732 !important;
+}
+.at-svc-pinterest_share {
+	background-color: #ab8069 !important;
+}
+.at-svc-linkedin {
+	background-color: #a6a098 !important;
+}
+.at-svc-email {
+	background-color: #d9d1ca !important;
+}

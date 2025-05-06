@@ -1,0 +1,276 @@
+/* NAVIGATION */
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    outline: none;
+    z-index: 9999;
+
+
+    .hamburger-inner, 
+    .hamburger-inner::before, 
+    .hamburger-inner::after {
+        background-color: $color-black;
+        height: 7px;
+        border-radius: 0;
+    }
+
+}
+
+#fixed-nav {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 23px 17px 17px 18px;
+    background-color: $color-yellow;
+    border-radius: 100%;
+    -webkit-transition: opacity .2s ease-in;
+    -moz-transition: opacity .2s ease-in;
+    -o-transition: opacity .2s ease-in;
+    -ms-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in;
+
+
+}
+
+#nav-wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.tear {
+    position: absolute;
+    z-index: 99;
+    top: 60px;
+    background-image: url('/assets/img/tear.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 75px;
+}
+
+#header-nav {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background-color: $color-yellow;
+    width: 100%;
+    padding: 20px 0;
+
+    .logo {
+        img {
+            width: 140px;
+            height: auto;
+        }
+    }
+
+
+}
+
+#navigation {
+    z-index: 9999;
+    position: fixed;
+    background-color: $color-yellow;
+    width: 100%;
+    height: 100vh;
+    transition: all .25s ease;
+    display: none;
+
+    @media only screen and (max-width: 600px) {
+        
+    }
+
+    &.open {
+        z-index: 999;
+        left: 0;
+        display: block;
+
+    }
+
+    .nav-container {
+        width: 100%;
+        margin: 100px auto;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+   
+        }
+
+        @media (max-width: 600px) {
+            padding-right: 0;
+            margin-top: 100px;
+        }
+
+        ul {
+            list-style-type: none;
+            -moz-padding-start: 0px;
+            padding-left: 0;
+
+            li {
+                display: block;
+                position: relative;
+                text-align: left;
+                font-size: 65px;
+                line-height: 75px;
+                letter-spacing: -2px;
+                font-weight: 800;
+                text-transform: uppercase;
+                margin: 10px 0;
+
+                @media (max-width: 768px) {
+                    font-size: 55px;
+                    line-height: 65px;
+      
+                }
+
+                @media (max-width: 600px) {
+                    font-size: 30px;
+                    line-height: 40px;
+      
+                }
+
+                &.parent-nav {
+
+                    a {
+                        &:before {
+                            content: '\f067';
+                            font-family: FontAwesome;
+                            font-weight: normal;
+                            font-size: 20px;
+                            position: absolute;
+                            left: 38%;
+
+                            @media (max-width: 768px) {
+                                left: 18%;
+                            }
+
+                            @media (max-width: 600px) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    
+
+                }
+
+                &.open-parent {
+                    
+                    a {
+                        &:before {
+                            content: '\f068';
+                        }
+                    }
+
+                }
+
+                &.search-icon {
+                    background-image: url('/assets/img/search-icon.png');
+                    background-repeat: no-repeat;
+                    background-position: 41% 50%;
+
+                    @media (max-width: 768px) {
+                        background-position: 24% 50%;
+                    }
+
+                    @media (max-width: 600px) {
+                      
+                    }
+
+                    a {
+                        color: rgba(0,0,0,0);
+                        text-indent: -9999px;
+                        display: block;
+                        
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: rgba(0,0,0,0);
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                a {
+                    padding: 5px 25px 5px 40%;
+                    color: $color-black;
+                    text-decoration: none !important;
+
+                    &:hover {
+
+                    }
+
+                    @media (max-width: 768px) {
+                        padding-left: 22%;
+                    }
+                }
+
+                .sub-menu {
+                    //display: none;
+                    position: relative;
+                    background-color: #000;
+                    //padding: 20px 0;
+                    max-height: 0; 
+                    //opacity: 0;
+                    overflow-y: hidden;
+                    -webkit-transition: max-height 0.2s ease-in-out;
+                    -moz-transition: max-height 0.2s ease-in-out;
+                    -o-transition: max-height 0.2s ease-in-out;
+                    transition: max-height 0.2s ease-in-out;
+
+                    &.open {
+                        //display: block;
+                        //opacity: 1;
+                        max-height: 700px;
+                    }
+
+                    @media (max-width: 768px) {
+                    
+                    }
+
+                    @media (max-width: 600px) {
+                     
+                    }
+
+                    li:first-of-type {
+                        padding-top: 20px;
+                    }
+
+                    li:last-of-type {
+                        padding-bottom: 20px;
+                    }
+
+                    li {
+                        font-size: 20px;
+                        line-height: 30px;
+                        text-align: left;
+                        margin: 2px 0;
+                        padding-left: 40%;
+
+                        @media (max-width: 768px) {
+                            padding-left: 22%;
+                        }
+
+                        a {
+                            padding: 5px;
+                            color: #fff;
+
+                            &:hover {
+                                color: $color-yellow;
+                            }
+
+                            &:before {
+                                content: "";
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

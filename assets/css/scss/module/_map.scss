@@ -1,0 +1,274 @@
+
+.page-template-page-map {
+
+    #hero {
+        .title {
+
+            @media (max-width: 600px) {
+                top: 150px;
+            }
+
+            .hero-text {
+
+                p {
+                    @media (max-width: 600px) {
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.gm-fullscreen-control {
+    display: none;
+}
+
+#interactive-map {
+
+    position: relative;
+    z-index: 50;
+
+
+    .interactive-legend,
+    .traffic-legend {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 9999;
+        width: 100%;
+        padding: 15px 10px;
+        background-color: rgba(0,0,0,0.7);
+
+        .title {
+            font-family: 'TaurunumFerrum-Steel';
+            font-size: 30px;
+            letter-spacing: 1px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .legend {
+            color: #fff;
+            text-align: right;
+            font-size: 11px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            img {
+                width: 13px;
+                height: auto;
+            }
+        }
+
+        .traffic {
+       
+            color: #fff;
+            font-size: 11px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            .box {
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                background-color: #000;
+                margin: 0 3px;
+
+                &.green {
+                    background-color: #459638;
+                }
+                &.yellow {
+                    background-color: #f5d24b;
+                }
+                &.orange {
+                    background-color: #f09a3c;
+                }
+                &.red {
+                    background-color: #e9402a;
+                }
+            }
+        }
+    }
+
+    .video-container {
+        display: none;
+        position: absolute;
+        background-color: #000;
+        width: 40%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 999;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        .video_btn_close {
+            //display: none;
+            background-color: transparent;
+            color: #fff !important;
+            padding: 0;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            z-index: 999;
+        }
+
+        .information {
+
+            .video-info {
+                padding: 50px 50px 0 50px;
+                text-align: center;
+
+                h2 {
+                    color: #fff;
+                    font-size: 35px;
+                }
+                p {
+                    color: #fff;
+                    margin-bottom:0;
+                    font-size: 14px;
+                    line-height: 26px;
+                }
+            }
+
+            #video_player {
+                .video-js {
+                    width: 100% !important;
+                    height: 400px !important;
+                }
+            }
+        }
+
+    }
+
+    .map {
+        position: relative;
+        width: 100%; 
+        height: 635px;
+
+        #ride_MapHolder {
+
+            height: 635px;
+
+            #rideMapPicker {
+                position: absolute;
+                z-index: 200;
+                top: 75px;
+                left: 50px;
+
+                .btn {
+                    font-size: 14px;
+                    padding: 5px 15px;
+                    background-color: #000;
+                    color: #444444 !important;
+                    width: 160px;
+
+                    &.interactive {
+                        margin-left: -5px;
+                    }
+
+                    &.active {
+                        -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0);
+                        box-shadow: inset 0 3px 5px rgba(0,0,0,0);
+                        background-color: $color-yellow;
+                        color: #000;
+                    }
+                }
+            }
+
+            .rideInfoWindow {
+                //z-index: 9999 !important;
+                position: relative;
+                background-color: #000;
+                color: #fff;
+                width: 320px;
+                text-align: center;
+                border: 8px solid #fff;
+                
+                /*
+                green - 449537
+                blue - 346bc0
+                red - e9402a
+                orange - f09a3c
+                yellow - f5d24a
+                */
+
+                
+                &.riw_1 {
+                    border: 8px solid #449537 !important;
+                    .btn {
+                        background-color: #449537;
+                    }
+                }
+                &.riw_2 {
+                    border: 8px solid #346bc0 !important;
+                    .btn {
+                        background-color: #346bc0;
+                    }
+                }
+                &.riw_3 {
+                    border: 8px solid #f5d24a !important;
+                    .btn {
+                        background-color: #f5d24a;
+                    }
+                }
+                &.riw_4 {
+                    border: 8px solid #f09a3c !important;
+                    .btn {
+                        background-color: #f09a3c;
+                    }
+                }
+                &.riw_5 {
+                    border: 8px solid #e9402a !important;
+                    .btn {
+                        background-color: #e9402a;
+                    }
+                }
+
+                .btn_close {
+                    background-color: transparent !important;
+                    color: #fff !important;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 10px !important;
+                    
+                }
+
+                .content {
+
+                    max-width: 300px;
+                    padding: 40px 25px 25px 25px;
+
+                    h4 {
+                        font-family: 'TaurunumFerrum-Steel';
+                        font-size: 26px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 1px;
+                        margin-bottom: 15px;
+
+
+
+                        &.btn {
+                            padding: 3px 10px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}

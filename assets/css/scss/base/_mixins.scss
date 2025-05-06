@@ -1,0 +1,82 @@
+/*Retina Images*/
+@mixin image-2x($image, $width, $height) {
+    @media (min--moz-device-pixel-ratio: 1.3),
+        (-o-min-device-pixel-ratio: 2.6/2),
+        (-webkit-min-device-pixel-ratio: 1.3),
+        (min-device-pixel-ratio: 1.3),
+        (min-resolution: 1.3dppx) {
+    background-image: url($image);
+    background-size: $width $height;
+    }
+}
+
+/*Transition*/
+@mixin transition($trans) {
+    -webkit-transition: all $trans ease;
+    -moz-transition: all $trans ease;
+    -ms-transition: all $trans ease;
+    -o-transition: all $trans ease;
+    transition: all $trans ease;
+}
+
+/*2D Transform - Translate*/
+@mixin translate($translate-x, $translate-y) {
+    -ms-transform: translate($translate-x, $translate-y);
+    -webkit-transform: translate($translate-x, $translate-y);
+    transform: translate($translate-x, $translate-y);
+}
+
+/*RGBA Colors*/
+@mixin background-opacity($color, $opacity: 0.3) {
+    background-color: $color;
+    background-color: rgba($color, $opacity);
+}
+
+/*Border Radius*/
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+/*Vertical Align Middle*/
+@mixin vertical-align {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+/*Clearfix*/
+@mixin clearfix {
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+/*Flexbox*/
+@mixin flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/*Flexbox - Align Middle*/
+@mixin align-middle() {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+/*Flexbox - Align End*/
+@mixin align-end() {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
