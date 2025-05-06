@@ -13,7 +13,7 @@ var _tracker_icons = ['/assets/img/map/tracker_helmet.png','/assets/img/map/trac
 
 // new = green, blue, yellow, orange, red
 var _route_colors = ['#449537', '#346bc0', '#f5d24a', '#f09a3c', '#e9402a'];
-var _start_icons = ['/assets/img/map/level_marker_1.png','/assets/img/map/level_marker_2.png','/assets/img/map/level_marker_5.png','/assets/img/map/level_marker_4.png','/assets/img/map/level_marker_3.png'];
+var _start_icons = ['./assets/img/map/level_marker_1.png','./assets/img/map/level_marker_2.png','./assets/img/map/level_marker_5.png','./assets/img/map/level_marker_4.png','./assets/img/map/level_marker_3.png'];
 //var _start_icons = ['/assets/img/map/level_marker_1.png','/assets/img/map/level_marker_2.png','/assets/img/map/level_marker_3.png','/assets/img/map/level_marker_4.png','/assets/img/map/level_marker_5.png'];
 function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay, markLabel,route_title)
 { 
