@@ -7,7 +7,7 @@ function InitVideoListing()
 		ToggleItemStatus(itemid,'roadvideo',$(this));
 	});
 }
-var _tracker_icons = ['../assets/img/map/tracker_helmet.png','../assets/img/map/tracker_helmet.png','../assets/img/map/tracker_helmet.png','../assets/img/map/tracker_helmet.png','../assets/img/map/tracker_helmet.png','../assets/img/map/tracker_helmet.png'];
+var _tracker_icons = ['/ohs-riding-map/assets/img/map/tracker_helmet.png','/ohs-riding-map/assets/img/map/tracker_helmet.png','/ohs-riding-map/assets/img/map/tracker_helmet.png','/ohs-riding-map/assets/img/map/tracker_helmet.png','/ohs-riding-map/assets/img/map/tracker_helmet.png','/ohs-riding-map/assets/img/map/tracker_helmet.png'];
 // 	green, blue, red, orange, yellow
 //var _route_colors = ['#39b54a','#65bdcd','#ea3118','#f59725','#edcd15'];
 
