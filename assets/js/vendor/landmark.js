@@ -40,7 +40,7 @@ function InitLandmarkEdit(map_canvas_id, initLatitude,initLongitude)
 	google.maps.event.addListener(landmark,'position_changed',function(){updateLatLongInputs()} );
 }
 
-var landmark_marker = '/assets/img/map/landmark_marker.png';
+var landmark_marker = '/ohs-riding-map/assets/img/map/landmark_marker.png';
 var _landMarkers = [];
 var _otherMarkers = [];
 
@@ -84,7 +84,7 @@ function otherMarker(landmarkArray,gmap) {
     this._title = landmarkArray[0];
     this._desc = landmarkArray[1];
     this._type = landmarkArray[2];
-    this._icon = '/assets/img/map/' + landmarkArray[2].replace(new RegExp(' ', 'g'), '') + '.png';
+    this._icon = '/ohs-riding-map/assets/img/map/' + landmarkArray[2].replace(new RegExp(' ', 'g'), '') + '.png';
     this._position = landmarkArray[3];  
     this._phone = landmarkArray[4];
     this._website = landmarkArray[5];
