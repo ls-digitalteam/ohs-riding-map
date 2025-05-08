@@ -5055,8 +5055,8 @@ button.list-group-item-danger.active:focus {
 /*Web Fonts*/
 @font-face {
   font-family: "TaurunumFerrum-Steel";
-  src: url("/assets/fonts/350A84_0_0.eot");
-  src: url("/assets/fonts/350A84_0_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/350A84_0_0.woff2") format("woff2"), url("/assets/fonts/350A84_0_0.woff") format("woff"), url("/assets/fonts/350A84_0_0.ttf") format("truetype");
+  src: url("/ohs-riding-map/assets/fonts/350A84_0_0.eot");
+  src: url("/ohs-riding-map/assets/fonts/350A84_0_0.eot?#iefix") format("embedded-opentype"), url("/ohs-riding-map/assets/fonts/350A84_0_0.woff2") format("woff2"), url("/ohs-riding-map/assets/fonts/350A84_0_0.woff") format("woff"), url("/ohs-riding-map/assets/fonts/350A84_0_0.ttf") format("truetype");
 }
 /*Body*/
 body {
@@ -5272,7 +5272,7 @@ hr {
   position: absolute;
   z-index: 99;
   top: 60px;
-  background-image: url("/assets/img/tear.png");
+  background-image: url("/ohs-riding-map/assets/img/tear.png");
   background-repeat: repeat-x;
   width: 100%;
   height: 75px;
@@ -5371,7 +5371,7 @@ hr {
   content: "\f068";
 }
 #navigation .nav-container ul li.search-icon {
-  background-image: url("/assets/img/search-icon.png");
+  background-image: url("/ohs-riding-map/assets/img/search-icon.png");
   background-repeat: no-repeat;
   background-position: 41% 50%;
 }
@@ -5519,7 +5519,7 @@ hr {
 }
 
 .page-content {
-  background-image: url("/assets/img/texture.jpg");
+  background-image: url("/ohs-riding-map/assets/img/texture.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 50px 0 0px 0;
@@ -6327,7 +6327,7 @@ hr {
   z-index: 99;
   top: -40px;
   left: 0;
-  background-image: url("/assets/img/tear-black.png");
+  background-image: url("/ohs-riding-map/assets/img/tear-black.png");
   background-repeat: repeat-x;
   width: 100%;
   height: 75px;
@@ -6337,7 +6337,7 @@ hr {
   z-index: 99;
   bottom: -25px;
   left: 0;
-  background-image: url("/assets/img/tear-black.png");
+  background-image: url("/ohs-riding-map/assets/img/tear-black.png");
   background-repeat: repeat-x;
   width: 100%;
   height: 75px;
