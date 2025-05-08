@@ -4,12 +4,12 @@ var icon_finish = "http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.p
 var icon_selected = "http://www.google.com/intl/en_us/mapfiles/ms/micons/yellow-dot.png";
 var icon_waypoint = "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png";
 
-var icon_start_1 = "/assets/img/map/level_marker_1.png";
-var icon_start_2 = "/assets/img/map/level_marker_2.png";
-var icon_start_3 = "/assets/img/map/level_marker_3.png";
-var icon_start_4 = "/assets/img/map/level_marker_4.png";
-var icon_start_5 = "/assets/img/map/level_marker_5.png";
-var start_icons = ['/assets/img/map/level_marker_1.png','/assets/img/map/level_marker_2.png','/assets/img/map/level_marker_3.png','/assets/img/map/level_marker_4.png','/assets/img/map/level_marker_5.png'];
+var icon_start_1 = "../assets/img/map/level_marker_1.png";
+var icon_start_2 = "../assets/img/map/level_marker_2.png";
+var icon_start_3 = "../assets/img/map/level_marker_3.png";
+var icon_start_4 = "../assets/img/map/level_marker_4.png";
+var icon_start_5 = "../assets/img/map/level_marker_5.png";
+var start_icons = ['../assets/img/map/level_marker_1.png','../assets/img/map/level_marker_2.png','../assets/img/map/level_marker_3.png','../assets/img/map/level_marker_4.png','../assets/img/map/level_marker_5.png'];
 
 var icon_tracker_1 = "/_images/icons/tracker_blue.gif";
 var icon_tracker_2 = "/_images/icons/tracker_green.gif";
