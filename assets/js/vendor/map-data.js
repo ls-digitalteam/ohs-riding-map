@@ -43,7 +43,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['3','Lead to Boondocks','The city of Lead to Boondocks.','3','44.2449','-103.703','14', 'https://www.youtube.com/watch?v=3j6yV_jNnBo&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=14',
+        ['3','Lead to Sugar Shack','The city of Lead to Sugar Shack.','3','44.2449','-103.703','14', 'https://www.youtube.com/watch?v=3j6yV_jNnBo&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=14',
             [
             
                 ['0',new google.maps.LatLng(44.3579,-103.74013000000001) ]
@@ -155,7 +155,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['18','Boondocks to Hill City','Start at Boondocks and make your way to Hill City.','3','43.9405','-103.543','14', 'https://www.youtube.com/watch?v=Cwu_M400KOQ&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=13',
+        ['18','Sugar Shack to Hill City','Start at Sugar Shack and make your way to Hill City.','3','44.1406904','-103.5690255','14', 'https://www.youtube.com/watch?v=Cwu_M400KOQ&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=13',
             [
             
                 ['0',new google.maps.LatLng(44.24644000000001,-103.69273000000001) ]
