@@ -158,7 +158,7 @@ var riding_maps = [
         ['18','Sugar Shack to Hill City','Start at Sugar Shack and make your way to Hill City.','3','44.1406904','-103.5690255','14', 'https://www.youtube.com/watch?v=Cwu_M400KOQ&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=13',
             [
             
-                ['0',new google.maps.LatLng(44.24644000000001,-103.69273000000001) ]
+                ['0',new google.maps.LatLng(44.1406904,-103.5690255) ]
             ,
                 ['2257',new google.maps.LatLng(43.93338000000001,-103.57518) ]
             
