@@ -11,7 +11,7 @@ else {
 
 var riding_maps = [
     
-        ['1','212 to Belle Fourche','Take an easy ride from Belle Fourche to Highway 212.','1','44.679','-103.636','10', 'https://southdakotarides.com/_video/rides/782AA6CE188B4F3A86D5C37BA8B63ECB.mp4',
+        ['1','212 to Belle Fourche','Take an easy ride from Belle Fourche to Highway 212.','1','44.679','-103.636','10', 'https://www.youtube.com/watch?v=Z6F9dkRFYE8&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=20',
             [
             
                 ['0',new google.maps.LatLng(44.67734,-103.43153000000001) ]
@@ -27,7 +27,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['2','Hwy 79 - Sturgis to Hwy 212','Ride along Highway 79 from Sturgis to Highway 212.','1','44.547','-103.439','10', 'https://southdakotarides.com/_video/rides/75D2210B188B4F3A8618A15C1981D597.mp4',
+        ['2','Hwy 79 - Sturgis to Hwy 212','Ride along Highway 79 from Sturgis to Highway 212.','1','44.547','-103.439','10', 'https://www.youtube.com/watch?v=ZQ5OOHbcVXs&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=18',
             [
             
                 ['0',new google.maps.LatLng(44.4164,-103.43616000000002) ]
@@ -43,7 +43,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['3','Lead to Boondocks','The city of Lead to Boondocks.','3','44.2449','-103.703','14', 'https://southdakotarides.com/_video/rides/74BF047B188B4F3A861B0BBA0110BD2E.mp4',
+        ['3','Lead to Boondocks','The city of Lead to Boondocks.','3','44.2449','-103.703','14', 'https://www.youtube.com/watch?v=3j6yV_jNnBo&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=14',
             [
             
                 ['0',new google.maps.LatLng(44.3579,-103.74013000000001) ]
@@ -53,7 +53,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['7','Keystone to Custer','Ride the city of Keystone to Custer.','3','43.8928','-103.424','15', 'https://southdakotarides.com/_video/rides/794821E8188B4F3A86F87ECB46FEC6AE.mp4',
+        ['7','Keystone to Custer','Ride the city of Keystone to Custer.','3','43.8928','-103.424','15', 'https://www.youtube.com/watch?v=OYy8L_f1ehI&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=12',
             [
             
                 ['0',new google.maps.LatLng(43.89627,-103.42567000000001) ]
@@ -63,7 +63,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['8','Nemo to Norris Peak Road','Ride from Nemo to Norris Peak Road, Rapid City.','4','44.162','-103.459','12', 'https://southdakotarides.com/_video/rides/797BB999188B4F3A86CAB771F4CFF23A.mp4',
+        ['8','Nemo to Norris Peak Road','Ride from Nemo to Norris Peak Road, Rapid City.','4','44.162','-103.459','12', 'https://www.youtube.com/watch?v=2FIVbK8gLYU&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=7',
             [
             
                 ['0',new google.maps.LatLng(44.19407,-103.50479000000001) ]
@@ -73,7 +73,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['9','Norris Peak Rd to Black Hawk','Head along Norris Peak Road to Black Hawk.','4','44.1042','-103.345','11', 'https://southdakotarides.com/_video/rides/79C22C56188B4F3A862CB3E463130FC8.mp4',
+        ['9','Norris Peak Rd to Black Hawk','Head along Norris Peak Road to Black Hawk.','4','44.1042','-103.345','11', 'https://www.youtube.com/watch?v=U3k6xc5q9MU&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=6',
             [
             
                 ['0',new google.maps.LatLng(44.08485,-103.43749000000001) ]
@@ -83,7 +83,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['10','Norris Peak Road','Wind along Norris Peak Road through the Black Hills.','5','44.1021','-103.424','12', 'https://southdakotarides.com/_video/rides/7B28ED97188B4F3A867DC7BEA5BE9E12.mp4',
+        ['10','Norris Peak Road','Wind along Norris Peak Road through the Black Hills.','5','44.1021','-103.424','12', 'https://www.youtube.com/watch?v=cq2F6okyosE&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=4',
             [
             
                 ['0',new google.maps.LatLng(44.12904,-103.41273000000001) ]
@@ -93,7 +93,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['11','Rapid City to Keystone Hwy 16','Ride Rapid City to Keystone along Hwy 16.','2','43.9671','-103.335','11', 'https://southdakotarides.com/_video/rides/7B5319D3188B4F3A86C142C20D6B1A06.mp4',
+        ['11','Rapid City to Keystone Hwy 16','Ride Rapid City to Keystone along Hwy 16.','2','43.9671','-103.335','11', 'https://www.youtube.com/watch?v=Inx8kD1OSaU&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=17',
             [
             
                 ['0',new google.maps.LatLng(44.05834,-103.23076) ]
@@ -103,7 +103,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['12','Cheyenne Crossing to Lead','Ride Cheyenne Crossing to the city of Lead.','3','44.3349','-103.787','13', 'https://southdakotarides.com/_video/rides/7C7090AA188B4F3A86ADE4C4315C39D3.mp4',
+        ['12','Cheyenne Crossing to Lead','Ride Cheyenne Crossing to the city of Lead.','3','44.3349','-103.787','13', 'https://www.youtube.com/watch?v=X0DZOp577Po&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=3',
             [
             
                 ['0',new google.maps.LatLng(44.29791,-103.86684000000001) ]
@@ -113,7 +113,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['13','Custer S-385 to Hwy 87','Ride on S-385 from Custer to the Hwy 87 intersection.','2','43.8371','-103.605','11', 'https://southdakotarides.com/_video/rides/7C9BD00C188B4F3A8654BEF624B8F0B0.mp4',
+        ['13','Custer S-385 to Hwy 87','Ride on S-385 from Custer to the Hwy 87 intersection.','2','43.8371','-103.605','11', 'https://www.youtube.com/watch?v=B1KNAxQRQXo&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=1',
             [
             
                 ['0',new google.maps.LatLng(43.7674,-103.60087000000001) ]
@@ -123,7 +123,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['15','Hwy 85 - Whitewood to Sturgis','Take this leisurely ride from Whitewood to Sturgis.','1','44.3629','-103.622','11', 'https://southdakotarides.com/_video/rides/7D92842D188B4F3A86C25D7F7B48023C.mp4',
+        ['15','Hwy 85 - Whitewood to Sturgis','Take this leisurely ride from Whitewood to Sturgis.','1','44.3629','-103.622','11', 'https://www.youtube.com/watch?v=q7oMNuIGv10&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=19',
             [
             
                 ['0',new google.maps.LatLng(44.47793,-103.73966000000001) ]
@@ -133,7 +133,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['16','Interior to Wall','Ride through the Badlands as you go from Interior to Wall.','3','43.853','-102.21','10', 'https://southdakotarides.com/_video/rides/Interior_to_Wall_1.mp4',
+        ['16','Interior to Wall','Ride through the Badlands as you go from Interior to Wall.','3','43.853','-102.21','10', 'https://www.youtube.com/watch?v=jlI9mukkYHk&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=10',
             [
             
                 ['0',new google.maps.LatLng(43.71958,-101.96236) ]
@@ -145,7 +145,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['17','Spearfish Canyon','Experience the beautiful Spearfish Canyon ride.','3','44.2776','-103.924','11', 'https://southdakotarides.com/_video/rides/Spearfish_Canyon.mp4',
+        ['17','Spearfish Canyon','Experience the beautiful Spearfish Canyon ride.','3','44.2776','-103.924','11', 'https://www.youtube.com/watch?v=lUmjF9oBV1k&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=15',
             [
             
                 ['0',new google.maps.LatLng(44.49889,-103.86296000000002) ]
@@ -155,7 +155,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['18','Boondocks to Hill City','Start at Boondocks and make your way to Hill City.','3','43.9405','-103.543','14', 'https://southdakotarides.com/_video/rides/Sugar_to_Hill_City.mp4',
+        ['18','Boondocks to Hill City','Start at Boondocks and make your way to Hill City.','3','43.9405','-103.543','14', 'https://www.youtube.com/watch?v=Cwu_M400KOQ&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=13',
             [
             
                 ['0',new google.maps.LatLng(44.24644000000001,-103.69273000000001) ]
@@ -165,7 +165,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['19','Vanocker Canyon to Nemo','Ride through Vanocker Canyon to Nemo.','4','44.2125','-103.521','13', 'https://southdakotarides.com/_video/rides/7E144DEC188B4F3A864D8BE19DA8A346.mp4',
+        ['19','Vanocker Canyon to Nemo','Ride through Vanocker Canyon to Nemo.','4','44.2125','-103.521','13', 'https://www.youtube.com/watch?v=RbqtJPyZBF0&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=8',
             [
             
                 ['0',new google.maps.LatLng(44.386950000000006,-103.50415000000001) ]
@@ -175,7 +175,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['20','Interior to Rapid City','Ride from Interior to Rapid City through the Buffalo Gap National Grasslands.','2','44.0303','-103.113','11', 'https://southdakotarides.com/_video/rides/7E5F519A188B4F3A8640A4002EEF974E.mp4',
+        ['20','Interior to Rapid City','Ride from Interior to Rapid City through the Buffalo Gap National Grasslands.','2','44.0303','-103.113','11', 'https://www.youtube.com/watch?v=iXt-Unj29QY&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=16',
             [
             
                 ['0',new google.maps.LatLng(43.71575000000001,-101.99579000000001) ]
@@ -185,7 +185,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['21','Wind Cave National Park on Hwy 87 to Wildlife Loop','Ride from Wind Cave National Park on your way to the Wildlife Loop.','4','43.6968','-103.461','13', 'https://southdakotarides.com/_video/rides/7ED26DEA188B4F3A86A99C9C34DCD295.mp4',
+        ['21','Wind Cave National Park on Hwy 87 to Wildlife Loop','Ride from Wind Cave National Park on your way to the Wildlife Loop.','4','43.6968','-103.461','13', 'https://www.youtube.com/watch?v=KoxNpRWu8pk&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=5',
             [
             
                 ['0',new google.maps.LatLng(43.760760000000005,-103.48045) ]
@@ -195,7 +195,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['22','Wildlife Loop Road','Ride through Custer State Park on the Wildlife Loop Road.','3','43.7534','-103.367','14', 'https://southdakotarides.com/_video/rides/Widlife_Loop.mp4',
+        ['22','Wildlife Loop Road','Ride through Custer State Park on the Wildlife Loop Road.','3','43.7534','-103.367','14', 'https://www.youtube.com/watch?v=l6m1YNEaJ4U&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=11',
             [
             
                 ['0',new google.maps.LatLng(43.705310000000004,-103.47833000000001) ]
@@ -207,7 +207,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['23','Wyoming to Custer via Hwy 16','Enter South Dakota toward Custer on Hwy 16.','3','43.7356','-103.597','12', 'https://southdakotarides.com/_video/rides/7F1B22C8188B4F3A861BE5C1857E7DBD.mp4',
+        ['23','Wyoming to Custer via Hwy 16','Enter South Dakota toward Custer on Hwy 16.','3','43.7356','-103.597','12', 'https://www.youtube.com/watch?v=MEjKqk1CCQ4&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=9',
             [
             
                 ['0',new google.maps.LatLng(43.760690000000004,-104.05343) ]
@@ -217,7 +217,7 @@ var riding_maps = [
             ]
         ]
         ,
-        ['24','Iron Mountain Road','Discover tunnels cut through the granite on your way to Mt. Rushmore.','5','43.8547','-103.425','11', 'https://southdakotarides.com/_video/rides/Iron_Mtn_Rd.mp4',
+        ['24','Iron Mountain Road','Discover tunnels cut through the granite on your way to Mt. Rushmore.','5','43.8547','-103.425','11', 'https://www.youtube.com/watch?v=w3qCzIeFkwo&list=PLbdkZpOHBink3DMMUcN_hOnFE9G5BQReE&index=2',
             [
             
                 ['0',new google.maps.LatLng(43.772760000000005,-103.33937) ]

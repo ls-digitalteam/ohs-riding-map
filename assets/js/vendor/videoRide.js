@@ -15,6 +15,21 @@ var _tracker_icons = ['/ohs-riding-map/assets/img/map/tracker_helmet.png','/ohs-
 var _route_colors = ['#449537', '#346bc0', '#f5d24a', '#f09a3c', '#e9402a'];
 var _start_icons = ['/ohs-riding-map/assets/img/map/level_marker_1.png','/ohs-riding-map/assets/img/map/level_marker_2.png','/ohs-riding-map/assets/img/map/level_marker_5.png','/ohs-riding-map/assets/img/map/level_marker_4.png','/ohs-riding-map/assets/img/map/level_marker_3.png'];
 //var _start_icons = ['/assets/img/map/level_marker_1.png','/assets/img/map/level_marker_2.png','/assets/img/map/level_marker_3.png','/assets/img/map/level_marker_4.png','/assets/img/map/level_marker_5.png'];
+
+// Helper function to extract YouTube video ID from various URL formats
+function getYouTubeVideoId(url) {
+	if (!url) return null;
+	
+	// If it's already just a video ID (no URL), return it
+	if (/^[a-zA-Z0-9_-]{11}$/.test(url)) {
+		return url;
+	}
+	
+	var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+	var match = url.match(regExp);
+	return (match && match[2].length === 11) ? match[2] : null;
+}
+
 function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay, markLabel,route_title)
 { 
 	route_title = typeof(route_title) == 'undefined' ? '' : route_title;
@@ -30,6 +45,8 @@ function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay,
 	mvr._routeDifficultyId = diffid; 
 	mvr._player_id = playerId;
 	try{mvr._videoPlayer = _V_(playerId);}catch(e){mvr._videoPlayer = null;}
+	mvr._youtubePlayer = null; // YouTube player instance
+	mvr._isYouTube = false; // Flag to indicate if using YouTube
 	mvr._map = mapObj;
 	mvr._map_directionsService = null;
 	mvr._map_directionsDisplay = null;
@@ -47,6 +64,7 @@ function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay,
 	mvr._rideMarkerLabel = markLabel;
 	mvr._startOverlay = null;
 	mvr._scheduleAutoPlay = false;
+	mvr._youtubeInterval = null; // Interval for YouTube time tracking
 	
 	mvr.blowUpStartMarker = function()
 	{
@@ -139,21 +157,75 @@ function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay,
 				VideoRider
 			}
 		} 
-		var randid = Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17);
-		mvr._player_id = 'plyr_dynamic_' + randid;
-		var newVideoHtml = VideoRider.PublicRider.videoplayer_html
-												 .replace('##SRCURL##',mvr.videoUrl)
-												 .replace('##WEBMURL##',mvr.videoUrl.replace('.mp4','.webm'))
-												 .replace('##OGVURL##',mvr.videoUrl.replace('.mp4','.ogv'))
-												 .replace('##ID##',mvr._player_id);
-		VideoRider.PublicRider.videoplayer_holder.empty();
-		VideoRider.PublicRider.videoplayer_holder.append(newVideoHtml);//.append(newVideoHtml);
 		
-		VideoJS(mvr._player_id,{},function(){
-			/*TryLog('*** dynamic ready ***');*/
-			mvr._videoPlayer = _V_(mvr._player_id);
-			mvr.initPlayer(true);
-		}); 
+		// Check if videoUrl is a YouTube URL
+		var youtubeVideoId = getYouTubeVideoId(mvr.videoUrl);
+		mvr._isYouTube = (youtubeVideoId !== null);
+		
+		if (mvr._isYouTube) {
+			// Use YouTube player
+			var randid = Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17);
+			mvr._player_id = 'youtube_player_' + randid;
+			
+			VideoRider.PublicRider.videoplayer_holder.empty();
+			var youtubeHtml = '<div id="' + mvr._player_id + '" style="width:100%;height:400px;"></div>';
+			VideoRider.PublicRider.videoplayer_holder.append(youtubeHtml);
+			
+			// Initialize YouTube player
+			var initYouTubePlayer = function() {
+				mvr._youtubePlayer = new YT.Player(mvr._player_id, {
+					height: '400',
+					width: '100%',
+					videoId: youtubeVideoId,
+					playerVars: {
+						'autoplay': 0,
+						'controls': 1,
+						'rel': 0,
+						'showinfo': 0
+					},
+					events: {
+						'onReady': function(event) {
+							mvr.initYouTubePlayer(true);
+						},
+						'onStateChange': function(event) {
+							if (event.data == YT.PlayerState.PLAYING && mvr._isTracking) {
+								mvr.updateTracker();
+							}
+						}
+					}
+				});
+			};
+			
+			if (typeof YT !== 'undefined' && YT.Player) {
+				// YouTube API already loaded
+				initYouTubePlayer();
+			} else {
+				// Wait for YouTube API to load
+				// Store the original callback if it exists
+				var originalCallback = window.onYouTubeIframeAPIReady;
+				window.onYouTubeIframeAPIReady = function() {
+					if (originalCallback) originalCallback();
+					initYouTubePlayer();
+				};
+			}
+		} else {
+			// Use VideoJS for regular video files (backward compatibility)
+			var randid = Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17) + Math.random() * Math.pow(10, 17);
+			mvr._player_id = 'plyr_dynamic_' + randid;
+			var newVideoHtml = VideoRider.PublicRider.videoplayer_html
+													 .replace('##SRCURL##',mvr.videoUrl)
+													 .replace('##WEBMURL##',mvr.videoUrl.replace('.mp4','.webm'))
+													 .replace('##OGVURL##',mvr.videoUrl.replace('.mp4','.ogv'))
+													 .replace('##ID##',mvr._player_id);
+			VideoRider.PublicRider.videoplayer_holder.empty();
+			VideoRider.PublicRider.videoplayer_holder.append(newVideoHtml);
+			
+			VideoJS(mvr._player_id,{},function(){
+				/*TryLog('*** dynamic ready ***');*/
+				mvr._videoPlayer = _V_(mvr._player_id);
+				mvr.initPlayer(true);
+			});
+		}
 		
 		mvr._isTracking = true;
 		/*TryLog('=========== loadRide() exit');*/
@@ -169,7 +241,11 @@ function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay,
 			{
 				if(mvr.hasVideoPlayer())
 				{/*get second from player object*/
-					currentSecond = parseInt(mvr._videoPlayer.currentTime());
+					if (mvr._isYouTube && mvr._youtubePlayer) {
+						currentSecond = parseInt(mvr._youtubePlayer.getCurrentTime());
+					} else if (mvr._videoPlayer) {
+						currentSecond = parseInt(mvr._videoPlayer.currentTime());
+					}
 				}
 			} 
 			var currentLag = mvr._videoLocation_LastUpdate - currentSecond;
@@ -257,25 +333,42 @@ function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay,
 		TryLog('Added Steps: ' + addedCount);*/
 	};
 	
-	mvr.hasVideoPlayer = function(){return mvr._videoPlayer != null && mvr._videoPlayer != undefined;};
+	mvr.hasVideoPlayer = function(){
+		if (mvr._isYouTube) {
+			return mvr._youtubePlayer != null && mvr._youtubePlayer != undefined;
+		}
+		return mvr._videoPlayer != null && mvr._videoPlayer != undefined;
+	};
 	
-	mvr.updateDuration = function(){mvr._video_fulltime = parseInt(mvr._videoPlayer.duration()); };
+	mvr.updateDuration = function(){
+		if (mvr._isYouTube && mvr._youtubePlayer) {
+			mvr._video_fulltime = parseInt(mvr._youtubePlayer.getDuration());
+		} else if (mvr._videoPlayer) {
+			mvr._video_fulltime = parseInt(mvr._videoPlayer.duration());
+		}
+	};
 	
 	mvr.start = function(enableTracking)
 	{
 		/*TryLog('================== mappedVideoRide.start()');*/
 		if(enableTracking != null || enableTracking != undefined )
 		{mvr._isTracking = enableTracking}
-		if(mvr.hasVideoPlayer())
-		{ mvr._videoPlayer.play(); }
-		else{mvr._scheduleAutoPlay = true;}
+		if (mvr._isYouTube && mvr._youtubePlayer) {
+			mvr._youtubePlayer.playVideo();
+		} else if(mvr.hasVideoPlayer()) {
+			mvr._videoPlayer.play();
+		} else {
+			mvr._scheduleAutoPlay = true;
+		}
 	};
 	
 	mvr.stop = function(stopTracking)
 	{ 
 	/*	TryLog('================== mappedVideoRide.stop()');*/
 		var myself = mvr;
-		if (mvr.hasVideoPlayer()) {
+		if (mvr._isYouTube && mvr._youtubePlayer) {
+			mvr._youtubePlayer.pauseVideo();
+		} else if (mvr.hasVideoPlayer()) {
 			/*TryLog('Player Paused');*/
 			mvr._videoPlayer.pause();
 		}
@@ -286,12 +379,43 @@ function mappedVideoRide(mapObj, leg_times, diffid, trackid, playerId, autoPlay,
 				mvr._rideMarker.setMap(null);
 				mvr._rideMarker = null;
 			}
-			if (mvr.hasVideoPlayer()) {
+			// Clear YouTube interval if it exists
+			if (mvr._youtubeInterval) {
+				clearInterval(mvr._youtubeInterval);
+				mvr._youtubeInterval = null;
+			}
+			if (mvr._isYouTube && mvr._youtubePlayer) {
+				mvr._youtubePlayer.destroy();
+				mvr._youtubePlayer = null;
+			} else if (mvr.hasVideoPlayer()) {
 				mvr._videoPlayer.destroy();
 			}
 		}
 	/*	TryLog('-----stop() done');*/
 	};
+	
+	mvr.initYouTubePlayer = function(autoPlay){
+	/*	TryLog('========= initYouTubePlayer');*/			
+		if(mvr._youtubePlayer != null)
+		{ 
+			var myself = mvr;	
+			mvr._isTracking = true;
+			mvr.updateDuration();
+			
+			// Set up interval to track video time (similar to timeupdate event)
+			if (mvr._youtubeInterval) {
+				clearInterval(mvr._youtubeInterval);
+			}
+			mvr._youtubeInterval = setInterval(function() {
+				if (myself._isTracking && myself._youtubePlayer && myself._youtubePlayer.getPlayerState() == YT.PlayerState.PLAYING) {
+					myself.updateTracker();
+				}
+			}, 1000); // Update every second
+			
+			if(autoPlay){myself.start();}
+		}
+	};
+	
 	mvr.initPlayer = function(autoPlay){
 	/*	TryLog('========= initPlayer');*/			
 		if(mvr._videoPlayer != null)
